@@ -1,0 +1,12 @@
+---
+-
+  hosts: all
+  tasks:
+    -
+      copy:
+        dest: /tmp/.
+        src: "/var/lib/jenkins/workspace/ansible/target/oms-eureka-service-0.0.1-SNAPSHOT.jar"
+      name: "Copy Artifact"
+    -
+      name: "Run Artifact"
+      shell: nohup java -jar /tmp/oms-eureka-service-0.0.1-SNAPSHOT.jar &
