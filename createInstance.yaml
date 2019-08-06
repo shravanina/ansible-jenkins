@@ -11,10 +11,10 @@
         local_action: ec2 
                       group=default
                       instance_type=t2.micro 
-                      image=ami-0080e4c5bc078760e
+                      image=ami-0b898040803850657
                       wait=true 
                       region=us-east-1
-                      keypair=Ec2KK2
+                      keypair=sravankey
                       count=1
         register: ec2
       - name: Touch a host file
