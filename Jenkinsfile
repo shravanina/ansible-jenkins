@@ -22,7 +22,7 @@ pipeline {
     }
     stage('DeployArtifact') {
       steps {
-        ansiblePlaybook become: true, becomeUser: 'jenkins', credentialsId: 'jenkins-user', inventory: '/etc/ansible/hosts', playbook: '$WORKSPACE/deployArtifact.yaml'
+        ansiblePlaybook become: true, becomeUser: 'jenkins', credentialsId: 'jenkins', inventory: '/etc/ansible/hosts', playbook: '$WORKSPACE/deployArtifact.yaml'
       }
     }
    
